@@ -1,0 +1,10 @@
+import React from "react"
+import { <%typeName%> } from "<%schemaPath%>"
+
+const Block: React.FC<{ element: <%typeName%> }> = ({ element }) => {
+
+    return <div>{element.__typename}</div>
+
+}
+
+export default Block

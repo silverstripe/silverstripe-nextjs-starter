@@ -1,0 +1,6 @@
+#!/bin/bash
+rm -rf .compiled
+
+tsc bin/$1.ts --esModuleInterop --outDir .compiled
+node .compiled/bin/$1.js
+rm -rf .compiled

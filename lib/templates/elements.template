@@ -1,0 +1,8 @@
+###-- GENERATED CODE. To modify, remove this line. --###
+
+<%imports%>
+
+fragment ElementsFields on BaseElementInterface {
+<%elements%>
+
+}

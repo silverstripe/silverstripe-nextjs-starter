@@ -1,0 +1,13 @@
+import React from "react"
+import PageLayout from "../../layouts/PageLayout"
+import { PageProps } from "../../../types"
+
+const Page: React.FC<PageProps> = ({ query: { <%queryName%> }}) => {
+    return (
+        <PageLayout page={<%queryName%>}>
+            <h2><%templateName%></h2>
+        </PageLayout>
+    )
+}
+
+export default Page

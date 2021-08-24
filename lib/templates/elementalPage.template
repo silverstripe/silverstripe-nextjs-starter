@@ -1,0 +1,15 @@
+import React from "react"
+import PageLayout from "../../layouts/PageLayout"
+import ElementalArea from "../../components/elements/ElementalArea"
+import { PageProps } from "../../../types"
+
+const Page: React.FC<PageProps> = ({ query: { <%queryName%> }}) => {
+    const elements = <%queryName%>?.elementalArea?.elements.nodes ?? []
+    return (
+        <PageLayout page={<%queryName%>}>
+            <ElementalArea elements={elements} />
+        </PageLayout>
+    )
+}
+
+export default Page

@@ -1,0 +1,6 @@
+fragment BaseFields on DataObject {
+    __typename
+    id
+    hashID
+    exists
+}

@@ -1,0 +1,34 @@
+#import "./BaseFields.graphql"
+fragment NavigationFields on PageInterface {
+    breadcrumbs {
+      ...BaseFields
+      menuTitle      
+      link
+    }
+    navChildren {
+      nodes {
+        ...BaseFields
+        ...on PageInterface {
+          title
+          link
+          menuTitle
+        }
+      }
+    }
+    navParent {
+      ...BaseFields
+      title
+      link
+      menuTitle
+      navChildren {
+        nodes {
+          ...BaseFields
+          ...on PageInterface {
+            title
+            link
+            menuTitle
+          }
+        }
+      }
+    }
+}

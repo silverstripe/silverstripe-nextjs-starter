@@ -1,0 +1,8 @@
+overwrite: true
+schema: "<your schema path here>"
+generates:
+  ./graphql.ts:
+    plugins:
+      - "typescript"
+config:
+  useImplementingTypes: true
