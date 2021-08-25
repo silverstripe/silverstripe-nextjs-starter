@@ -7,11 +7,12 @@
     "dev": "NODE_OPTIONS='--inspect' next dev",
     "prebuild": "yarn generate && cross-env ./bin/run buildManifest",
     "build": "next build",
-    "start": "next start",
+    "start": "next start",    
     "clean": "npx rimraf .next",
     "generate": "cross-env graphql-codegen --config codegen.yml",
     "scaffold-blocks": "cross-env ./bin/run scaffoldBlocks",
-    "scaffold-pages": "cross-env ./bin/run scaffoldPages"
+    "scaffold-pages": "cross-env ./bin/run scaffoldPages",
+    "setup": "cross-env ./bin/run setup"    
   },
   "engines": {
     "node": ">=14"
@@ -47,8 +48,10 @@
     "@types/glob": "^7.1.3",
     "@types/node-fetch": "^2.5.12",
     "@types/react": "17.0.8",
+    "chalk": "^4.1.2",
     "cross-env": "^7.0.3",
     "glob": "^7.1.7",
+    "inquirer": "^8.1.2",
     "node-fetch": "^2.6.1",
     "prettier": "^2.3.2",
     "pretty-js": "^0.2.2",
