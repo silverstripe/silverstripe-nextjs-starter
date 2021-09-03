@@ -1,28 +1,27 @@
-import React, { useState } from "react"
-import { PageContext, PageContextValue } from "../../lib/pageContext/PageContext"
-import { Context as UIStateContext, UIStateContext as UIStateContextType } from "../context/UIStateContext"
+import React, { PropsWithChildren, useState } from "react"
+import {
+  PageContext,
+  PageContextValue,
+} from "../../lib/pageContext/PageContext"
+import Footer from "../components/Footer"
+import Header from "../components/Header"
+import StateProvider from "../state/StateProvider"
 
 interface Props {
-  page: PageContextValue
+  page?: PageContextValue | null
 }
 
-
-const PageLayout: React.FC<Props> = ({ children, page }) => {
-
-  const [sideMenuOpen, setSideMenuOpen] = useState(false)
-  
-  const uiState: UIStateContextType = {
-    sideMenuOpen,
-    setSideMenuOpen(bool) {
-      setSideMenuOpen(bool)
-    },
-  }
+const PageLayout = ({ children, page = null }: PropsWithChildren<Props>): JSX.Element => {
   return (
-    <UIStateContext.Provider value={uiState}>
+    <StateProvider>
       <PageContext.Provider value={page}>
-          {children}
+        <div className="min-h-screen flex flex-col">
+          <Header />
+            {children}          
+          <Footer />
+        </div>
       </PageContext.Provider>
-    </UIStateContext.Provider>
+    </StateProvider>
   )
 }
 

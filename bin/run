@@ -2,5 +2,10 @@
 rm -rf .compiled
 
 tsc bin/$1.ts --esModuleInterop --outDir .compiled
-node .compiled/bin/$1.js
+if [[ -d .compiled/bin ]]
+then
+    node .compiled/bin/$1.js
+else
+    node .compiled/$1.js
+fi
 rm -rf .compiled

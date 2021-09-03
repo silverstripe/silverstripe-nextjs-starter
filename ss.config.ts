@@ -18,15 +18,8 @@ interface StringMap {
   [key: string]: string
 }
 
-export interface ClientConfig {
-  endpoint: string
-  options: {
-      [key: string]: string | StringMap
-      headers: StringMap
-  }
-}
 
-export default {
+const config: ProjectConfig = {
     prebuild: [
       cacheStaticQueries,
       cacheQueryManifest,
@@ -69,3 +62,5 @@ export default {
         }
     }
 }
+
+export default config

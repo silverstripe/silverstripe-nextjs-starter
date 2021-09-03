@@ -1,3 +1,4 @@
+// @ts-ignore
 import inquirer from 'inquirer'
 import chalk from 'chalk'
 import path from 'path'
@@ -15,7 +16,7 @@ console.log(`
   Ready? Let's do it! 🎉
 `)
 
-const previewKey = crypto.randomBytes(256).toString(`base64`)
+const previewKey = crypto.randomBytes(256).toString(`base64`).substring(0, 64)
 
 const questions = [
   {
@@ -41,7 +42,7 @@ const questions = [
         (e.g. https://mywebsite.com) Local URLs are OK!
         
 URL:    `,
-    when: answers => {
+    when: (answers: any) => {
       if (!answers.module) {
         console.log(
           chalk.yellow(`
@@ -56,7 +57,7 @@ URL:    `,
 
       return true
     },
-    validate: input => {
+    validate: (input: any) => {
       let url
       try {
         url = new URL(input)
@@ -71,7 +72,7 @@ URL:    `,
   },
   {
     name: `apiKey`,
-    message: answers => `What is the ${chalk.green(
+    message: (answers: any) => `What is the ${chalk.green(
       "API key"
     )} of your admin user?
         Your API key can be found at:
@@ -80,7 +81,7 @@ URL:    `,
     )} <your user> ${chalk.red("->")} ${chalk.green("Api keys")}
         
 API Key: `,
-    validate: input =>
+    validate: (input: any) =>
       input.length === 48 ||
       `That does not appear to be a valid API key. It should be a 48 character string.`,
   },
@@ -105,7 +106,7 @@ NEXTJS_PREVIEW_KEY='${previewKey}'
 
 inquirer
   .prompt(questions)
-  .then(({ baseUrl, apiKey }) => {
+  .then(({ baseUrl, apiKey }: any) => {
     console.log("Writing env file...")
     const configFilePath = path.resolve(__dirname, "..", ".env")
     const codegenFilePath = path.resolve(__dirname, "..", "codegen.yml")
@@ -131,7 +132,9 @@ SILVERSTRIPE_PREVIEW_KEY = '${previewKey}'
 
     console.log(
       chalk.green(
-        `All set! You can now run:
+        `
+
+All set! You can now run:
         
         `
       ),
@@ -160,4 +163,4 @@ to see your NextJS website in action.
 
     )
   })
-  .catch(error => console.error(error))
+  .catch((error: any) => console.error(error))

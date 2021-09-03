@@ -1,5 +1,5 @@
 import React from "react"
-import "../styles/scss/app.scss"
+import "../styles/app.css"
 import type { AppProps } from "next/app"
 import { StaticQueryContext } from "../lib/staticQuery/StaticQueryContext"
 import staticQueries from "../.cache/.staticQueries.json"
