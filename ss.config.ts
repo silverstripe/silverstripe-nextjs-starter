@@ -1,34 +1,12 @@
-import dotenv from "dotenv"
 import {
-  cacheGetProps,
-  cacheTypeAncestry,
-  cacheQueryManifest,
-  cacheTemplateManifest,
-  cacheStaticQueries,
-  cacheElementalBlocks,
-} from "./lib/prebuild"
-
-import getBaseURL from "./lib/config/getBaseURL"
-import getGraphQLEndpoint from "./lib/config/getGraphQLEndpoint"
-import defaultPluraliser from "./lib/build/pluraliser"
-
-dotenv.config()
-
-interface StringMap {
-  [key: string]: string
-}
+  getBaseURL,
+  getGraphQLEndpoint,
+  defaultPluraliser,  
+} from "@silverstripe/nextjs-toolkit"
+import { ClientConfig, ProjectConfig } from "@silverstripe/nextjs-toolkit"
 
 
 const config: ProjectConfig = {
-    prebuild: [
-      cacheStaticQueries,
-      cacheQueryManifest,
-      cacheTypeAncestry,
-      cacheTemplateManifest,
-      cacheGetProps,
-      cacheElementalBlocks,
-    ],    
-
     elemental: {
       enabled: true,
       fragmentsPath: `fragments/elemental/elements`,
@@ -44,6 +22,8 @@ const config: ProjectConfig = {
     },
 
     baseURL: getBaseURL(),
+
+    baseDir: process.cwd(),
     
     client(): ClientConfig {
         const options: ClientConfig["options"] = {

@@ -1,0 +1,11 @@
+#import "./elements/_elements.graphql"
+#import "../BaseFields.graphql"
+
+fragment ElementalAreaFields on ElementalArea {
+      elements {
+        nodes {
+          ...BaseFields
+          ...ElementsFields
+       }
+      }
+}

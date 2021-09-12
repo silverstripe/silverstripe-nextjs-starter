@@ -1,12 +1,12 @@
 import React from "react"
-import "../styles/app.css"
+import "styles/scss/app.scss"
 import type { AppProps } from "next/app"
-import { StaticQueryContext } from "../lib/staticQuery/StaticQueryContext"
-import staticQueries from "../.cache/.staticQueries.json"
+import { StaticQueryContext } from "@silverstripe/nextjs-toolkit"
+import cache from "cache"
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (    
-    <StaticQueryContext.Provider value={staticQueries}>
+    <StaticQueryContext.Provider value={cache.staticQueries}>
       <Component {...pageProps} />
     </StaticQueryContext.Provider>
   )

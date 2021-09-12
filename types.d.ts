@@ -1,10 +1,5 @@
 import { Query, Maybe } from "./graphql";
 
-declare module 'file-system-cache'
-declare module '@babel/traverse'
-declare module "node-fetch"
-declare module "gql-compress"
-
 export interface PageProps {
     query: Query
     extraProps: {
@@ -12,7 +7,6 @@ export interface PageProps {
     }
 }
 
-    
 export interface StringMap {
     [key: string]: string
 }

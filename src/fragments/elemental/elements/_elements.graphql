@@ -1,0 +1,15 @@
+###-- GENERATED CODE. To modify, remove this line. --###
+
+#import "../../BaseFields.graphql"
+#import "./BaseElementFields.graphql"
+#import "./ElementContentFields.graphql"
+
+fragment ElementsFields on BaseElementInterface {
+	...BaseFields
+	...BaseElementFields
+
+    ... on ElementContent {
+        ...ElementContentFields
+    }
+
+}

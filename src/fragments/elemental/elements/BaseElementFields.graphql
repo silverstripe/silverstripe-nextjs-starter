@@ -1,0 +1,13 @@
+fragment BaseElementFields on BaseElement {
+	lastEdited
+	created
+	version
+	title
+	showTitle
+	sort
+	extraClass
+	style
+	parentID
+	link
+
+}

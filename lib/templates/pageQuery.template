@@ -1,7 +1,0 @@
-#import "../../fragments/BasePageFields.graphql"
-
-query <%operationName%>($link: String!) {
-  <%queryName%>(link: $link) {
-    ...BasePageFields
-  }
-}

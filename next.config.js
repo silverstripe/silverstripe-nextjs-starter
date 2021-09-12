@@ -1,12 +1,10 @@
 const path = require('path')
 require(`dotenv`).config()
 
+
 module.exports = {
-  webpack: (config, { webpack, buildId, isServer }) => {
-    // Fixes npm packages that depend on `fs` module
-    if (!isServer) {
-      config.resolve.fallback.fs = false
-    }
+  webpack: (config, { webpack, buildId }) => {
+    // Fixes npm packages that depend on node modules
     config.plugins.push(
       new webpack.DefinePlugin({
         'process.env.BUILD_ID': JSON.stringify(buildId),
