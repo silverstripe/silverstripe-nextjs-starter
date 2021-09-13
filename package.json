@@ -18,7 +18,7 @@
     "node": ">=14"
   },
   "dependencies": {
-    "@silverstripe/nextjs-builder": "^0.1.7",
+    "@silverstripe/nextjs-builder": "^0.1.8",
     "@silverstripe/nextjs-toolkit": "^0.1.2",
     "assert": "^2.0.0",
     "classnames": "^2.3.1",
