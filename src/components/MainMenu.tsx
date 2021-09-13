@@ -2,9 +2,11 @@ import React from 'react'
 import { Navigation, useStaticQuery } from "@silverstripe/nextjs-toolkit"
 import { Query } from "ss-schema"
 import Link from "next/link"
-import { useRouter } from 'next/dist/client/router'
+import { useRouter } from 'next/router'
+
 
 const MainMenu = (): JSX.Element => {
+    const router = useRouter()
     const menu = useStaticQuery<Query["readPages"]>(`
         query MainMenu {
             readPages(filter: { parentID: { eq: 0 } }) {
@@ -18,11 +20,10 @@ const MainMenu = (): JSX.Element => {
         }   
     `)
     const menuItems = menu?.readPages?.nodes ?? []
-    useRouter()
     return (
         <>
         <nav>
-            <Navigation items={menuItems}>
+            <Navigation items={menuItems} router={router}>
                 {(child, state) => {
                     return (
                         <div key={state.key}>
@@ -38,6 +39,9 @@ const MainMenu = (): JSX.Element => {
                 nav {
                     display: flex;
                     gap: 1rem;
+                }
+                .current {
+                    border-bottom: 2px solid;
                 }
         `}</style>
         </>

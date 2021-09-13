@@ -1157,30 +1157,10 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@silverstripe/nextjs-builder@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@silverstripe/nextjs-builder/-/nextjs-builder-0.1.0.tgz#96745ab811037d8686fbf93eae129ee30eed2189"
-  integrity sha512-nCM+2DzQ0ZM6a2eie9uFLM72k5ad2TQZCyh535cs0P9sg0WACLRBptFmh8ES6dkEXgTsSmd16YVkG7uGD+cNuw==
-  dependencies:
-    "@babel/parser" "^7.15.3"
-    "@babel/traverse" "^7.15.4"
-    "@silverstripe/nextjs-toolkit" "*"
-    chalk "^4.1.0"
-    crypto-browserify "^3.12.0"
-    dotenv "^10.0.0"
-    file-system-cache "^1.0.5"
-    glob "^7.1.7"
-    gql-compress "^2.0.24"
-    graphql "^15.5.0"
-    html-react-parser "^1.2.8"
-    node-fetch "^2.6.1"
-    react "^17.0.2"
-    react-dom "^17.0.2"
-
-"@silverstripe/nextjs-toolkit@*":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@silverstripe/nextjs-toolkit/-/nextjs-toolkit-0.1.0.tgz#e9234f1f4cf2d391a5220b3c6d8ae559e1dc9f2f"
-  integrity sha512-2bA9ToJHl/GPF88Rw1aebYiQhgps8Eg18fMpTO1vrUps4r2Q5ABzsNjRuJ04zrCzkayGgLyUY+QBIv58Q6LZxg==
+"@silverstripe/nextjs-builder@^0.1.6":
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/@silverstripe/nextjs-builder/-/nextjs-builder-0.1.6.tgz#15c01bcd3cb03fb950bdc5906cadf3aa33766a34"
+  integrity sha512-1bJjPfrIEvJcpZW8Cton2BGes0XYlrhscekdV9k+RFh18tfdfDrtBzOFO7U8MmX/D+yCgfimysgKbg6Nx6NbeA==
   dependencies:
     "@babel/parser" "^7.15.3"
     "@babel/traverse" "^7.15.4"
@@ -1196,10 +1176,10 @@
     react "^17.0.2"
     react-dom "^17.0.2"
 
-"@silverstripe/nextjs-toolkit@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@silverstripe/nextjs-toolkit/-/nextjs-toolkit-0.1.1.tgz#92a1a5510507f91fba2befd04e6beffb7e2e0f71"
-  integrity sha512-L9+xATFGlO7Vi16GeL//tPDBdThhbjr1UAYTAGIp4+zTwxBhw/1mPSgCkr0OSU3afqYxsnRENKC5nfiDZl/BzQ==
+"@silverstripe/nextjs-toolkit@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@silverstripe/nextjs-toolkit/-/nextjs-toolkit-0.1.2.tgz#37b6789eec7215466837b79c89020cdceec9cbbf"
+  integrity sha512-5rsSF7N/T7kfARUADgpMKj5HXktaKAayVTzv4Ms+G6OfZjN7rxdZ/lgxlqMFLYahU0mWJ60Pr2J7PoDsiNsLbA==
   dependencies:
     "@babel/parser" "^7.15.3"
     "@babel/traverse" "^7.15.4"

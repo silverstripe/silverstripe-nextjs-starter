@@ -18,8 +18,8 @@
       "lib": ["../lib", "../lib/*"],
       "types": ["../types"],
       "cache": ["../.cache", "../.cache/*"],
-      "ss-schema": ["../graphql"],
-      "ss-config": ["../ss.config"]
+      "ss-schema": ["../ss-schema"],
+      "ss-config": ["../ss.config"],
     }
   },
   "include": ["next-env.d.ts", "graphql.ts", "**/*.ts", "**/*.tsx"],

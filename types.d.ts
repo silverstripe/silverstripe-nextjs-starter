@@ -1,4 +1,4 @@
-import { Query, Maybe } from "./graphql";
+import { Query, Maybe } from "./ss-schema";
 
 export interface PageProps {
     query: Query

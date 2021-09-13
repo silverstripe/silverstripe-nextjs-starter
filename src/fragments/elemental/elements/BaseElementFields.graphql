@@ -1,4 +1,4 @@
-fragment BaseElementFields on BaseElement {
+fragment BaseElementFields on BaseElementInterface {
 	lastEdited
 	created
 	version

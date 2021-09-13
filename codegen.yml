@@ -1,7 +1,7 @@
 overwrite: true
 schema: 'http://sscom.test/graphql'
 generates:
-  ./graphql.ts:
+  ./ss-schema.ts:
     plugins:
       - "typescript"
 config:

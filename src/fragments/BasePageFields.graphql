@@ -9,5 +9,8 @@ fragment BasePageFields on PageInterface {
     link    
     ... on PageInterface {
         ...NavigationFields
+        elementalArea {
+            ...ElementalAreaFields
+        }
     }
 }
