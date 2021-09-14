@@ -1,0 +1,20 @@
+#import "../../fragments/BasePageFields.graphql"
+
+query ReadOneHomePage($link: String!) {
+  readOneHomePage(link: $link) {
+    ...BasePageFields
+    
+	heroHeadline
+	heroSubheadline
+	heroImageID
+	heroLinkID
+	heroImage { 
+ 		__typename ## add your fields below
+	}
+	heroLink { 
+ 		__typename ## add your fields below
+	}
+
+
+  }
+}
