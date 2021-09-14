@@ -1,6 +1,5 @@
 import React from "react"
 import PageLayout from "layouts/PageLayout"
-import ElementalArea from "components/elements/ElementalArea"
 import { PageProps } from "types"
 
 const Page: React.FC<PageProps> = ({ query: { readOnePage }}) => {
@@ -11,8 +10,7 @@ const Page: React.FC<PageProps> = ({ query: { readOnePage }}) => {
     const elements = readOnePage.elementalArea?.elements.nodes ?? []
     return (
         <PageLayout page={readOnePage}>
-            <h2>{readOnePage.title}</h2>
-            <ElementalArea elements={elements} />
+            <h2>{readOnePage.title}</h2>            
         </PageLayout>
     )
 }
