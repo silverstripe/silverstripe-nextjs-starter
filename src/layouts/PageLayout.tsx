@@ -14,7 +14,7 @@ const PageLayout = ({
   return (
     <PageContext.Provider value={page}>
       <Head>
-        <title>{page?.metaTitle ?? page?.title}</title>
+        <title>{page?.title}</title>
       </Head>
       <MainMenu />
       <div>{children}</div>
