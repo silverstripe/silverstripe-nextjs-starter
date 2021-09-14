@@ -9,7 +9,10 @@ const MainMenu = (): JSX.Element => {
     const router = useRouter()
     const menu = useStaticQuery<Query["readPages"]>(`
         query MainMenu {
-            readPages(filter: { parentID: { eq: 0 } }) {
+            readPages(filter: {
+                parentID: { eq: 0 },
+                showInMenus: { eq: true }
+            }) {
                 nodes {
                     id
                     title

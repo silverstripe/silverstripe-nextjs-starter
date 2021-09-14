@@ -1,24 +1,15 @@
 import {
   getBaseURL,
   getGraphQLEndpoint,
-  defaultPluraliser,  
+  defaultConfig,
 } from "@silverstripe/nextjs-toolkit"
 import { ClientConfig, ProjectConfig } from "@silverstripe/nextjs-toolkit"
 
 
 const config: ProjectConfig = {
-    elemental: {
-      enabled: true,
-      fragmentsPath: `fragments/elemental/elements`,
-      componentsPath: `components/elements`,
-    },
-
-    query: {
-      pluraliser: defaultPluraliser,
-    },
-
+    ...defaultConfig,
     page: {
-      ignore: [`RedirectorPage`, `ErrorPage`]
+      ignore: [`RedirectorPage`, `ErrorPage`, `VirtualPage`]
     },
 
     baseURL: getBaseURL(),
