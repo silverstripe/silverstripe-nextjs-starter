@@ -13,49 +13,6 @@ interface Props {
 const MainMenu = ({ menuItems }: Props): JSX.Element => {
   const router = useRouter()
 
-<<<<<<< HEAD
-const MainMenu = (): JSX.Element => {
-    const router = useRouter()
-    const menu = useStaticQuery<Query["readPages"]>(`
-        query MainMenu {
-            readPages(filter: { parentID: { eq: 0 } }) {
-                nodes {
-                    id
-                    title
-                    link
-                    menuTitle
-                }
-            }
-        }   
-    `)
-    const menuItems = menu?.readPages?.nodes ?? []
-    return (
-        <>
-        <nav>
-            <Navigation items={menuItems} router={router}>
-                {(child, state) => {
-                    return (
-                        <div key={state.key}>
-                            <Link href={child.link}>
-                                <a className={state.linkingMode}>{child.menuTitle}</a>
-                            </Link>
-                        </div>
-                    )
-                }}
-            </Navigation>
-        </nav>
-        <style jsx>{`
-                nav {
-                    display: flex;
-                    gap: 1rem;
-                }
-                .current {
-                    border-bottom: 2px solid;
-                }
-        `}</style>
-        </>
-    )
-=======
   return (
     <Popover.Group as="nav" className="hidden md:flex space-x-10">
       <Navigation items={menuItems} router={router}>
@@ -97,7 +54,6 @@ const MainMenu = (): JSX.Element => {
       </Navigation>
     </Popover.Group>
   )
->>>>>>> 4fc1360... Add theme
 }
 
 export default MainMenu

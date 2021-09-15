@@ -8,7 +8,6 @@ import { ClientConfig, ProjectConfig } from "@silverstripe/nextjs-toolkit"
 
 const config: ProjectConfig = {
     elemental: {
-      enabled: true,
       fragmentsPath: `fragments/elemental/elements`,
       componentsPath: `components/elements`,
     },
