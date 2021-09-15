@@ -9,10 +9,11 @@ query ReadOneHomePage($link: String!) {
 	heroImageID
 	heroLinkID
 	heroImage { 
- 		__typename ## add your fields below
+ 		absoluteLink
+		 title
 	}
 	heroLink { 
- 		__typename ## add your fields below
+ 		link
 	}
 
 
