@@ -18,8 +18,8 @@
     "node": ">=14"
   },
   "dependencies": {
-    "@silverstripe/nextjs-builder": "^0.1.6",
-    "@silverstripe/nextjs-toolkit": "^0.1.2",
+    "@silverstripe/nextjs-builder": "^0.1.11",
+    "@silverstripe/nextjs-toolkit": "^0.1.4",
     "assert": "^2.0.0",
     "classnames": "^2.3.1",
     "crypto-browserify": "^3.12.0",
@@ -30,7 +30,11 @@
     "node-fetch": "^2.6.1",
     "path-browserify": "^1.0.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "@headlessui/react": "^1.4.0",
+    "@heroicons/react": "^1.0.4",
+    "@tailwindcss/aspect-ratio": "^0.2.1",
+    "@tailwindcss/typography": "^0.4.1"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "1.21.6",
@@ -44,6 +48,11 @@
     "prettier": "^2.3.2",
     "pretty-js": "^0.2.2",
     "sass": "1.32.12",
-    "typescript": "4.3.2"
+    "typescript": "4.3.2",
+    "autoprefixer": "^10.3.2",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.7"
+
+
   }
 }

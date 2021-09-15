@@ -2,6 +2,9 @@ import React, { PropsWithChildren } from "react"
 import { PageContext } from "lib"
 import { PageUnion } from "types"
 import MainMenu from "components/MainMenu"
+import Header from "components/Header"
+import Footer from "components/Footer"
+
 import Head from "next/head"
 interface Props {
   page?: PageUnion | null
@@ -16,8 +19,11 @@ const PageLayout = ({
       <Head>
         <title>{page?.metaTitle ?? page?.title}</title>
       </Head>
-      <MainMenu />
-      <div>{children}</div>
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        {children}
+        <Footer />
+      </div>
     </PageContext.Provider>
   )
 }
