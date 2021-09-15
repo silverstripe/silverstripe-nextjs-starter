@@ -8,6 +8,11 @@ import { ClientConfig, ProjectConfig } from "@silverstripe/nextjs-toolkit"
 
 const config: ProjectConfig = {
     ...defaultConfig,
+    elemental: {
+      fragmentsPath: `fragments/elemental/elements`,
+      componentsPath: `components/elements`,
+    },
+    
     page: {
       ignore: [`RedirectorPage`, `ErrorPage`, `VirtualPage`]
     },
