@@ -10,8 +10,8 @@
     "start": "next start",
     "clean": "npx rimraf .next",
     "generate": "graphql-codegen --config codegen.yml",
-    "scaffold-blocks": "nextjs-builder scaffold-blocks",
-    "scaffold-pages": "nextjs-builder scaffold-pages",
+    "scaffold-blocks": "yarn generate && nextjs-builder scaffold-blocks",
+    "scaffold-pages": "yarn generate && nextjs-builder scaffold-pages",
     "setup": "nextjs-builder setup"
   },
   "engines": {

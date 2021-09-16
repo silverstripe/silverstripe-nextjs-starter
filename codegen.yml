@@ -1,5 +1,5 @@
 overwrite: true
-schema: '%SCHEMA_URL%'
+schema: 'http://ss-nextjs-elemental.test/graphql'
 generates:
   ./ss-schema.ts:
     plugins:

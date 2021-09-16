@@ -1,4 +1,5 @@
-fragment BaseElementFields on BaseElementInterface {
+fragment BaseElementFields on BaseElement {
+	className
 	lastEdited
 	created
 	version
@@ -8,6 +9,9 @@ fragment BaseElementFields on BaseElementInterface {
 	extraClass
 	style
 	parentID
+	parent { 
+ 		__typename ## add your fields below
+	}
 	link
 
 }
