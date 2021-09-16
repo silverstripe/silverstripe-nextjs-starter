@@ -1,10 +1,6 @@
-import { Fragment, PropsWithChildren } from "react"
-import Link from "next/link"
-import { ChevronDownIcon } from "@heroicons/react/solid"
-import { Popover, Transition } from "@headlessui/react"
+import { PropsWithChildren } from "react"
+import { Popover } from "@headlessui/react"
 import MenuItem from "./MenuItem"
-import classNames from "utils/classNames"
-import { PageInterface } from "ss-schema"
 import SlideDownAnimation from "animations/SlideDownAnimation"
 import DropdownIcon from "./DropdownIcon"
 

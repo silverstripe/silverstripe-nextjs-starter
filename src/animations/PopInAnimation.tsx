@@ -1,7 +1,10 @@
 import { Transition } from "@headlessui/react"
 import React, { PropsWithChildren, Fragment } from "react"
 
-const PopInAnimation = ({ children }: PropsWithChildren<{}>): JSX.Element => {
+interface Props {
+  show?: boolean
+}
+const PopInAnimation = ({ children, show }: PropsWithChildren<Props>): JSX.Element => {
   return (
     <Transition
       as={Fragment}
@@ -11,6 +14,7 @@ const PopInAnimation = ({ children }: PropsWithChildren<{}>): JSX.Element => {
       leave="duration-100 ease-in"
       leaveFrom="opacity-100 scale-100"
       leaveTo="opacity-0 scale-95"
+      show={show}
     >
       {children}
     </Transition>

@@ -2,12 +2,14 @@ import React from "react"
 import { Popover } from "@headlessui/react"
 import classNames from "utils/classNames"
 import { ChevronDownIcon } from "@heroicons/react/solid"
+import { useUIState } from "context/uiState"
 
 interface Props {
   open?: boolean
+  onClick?: () => void
 }
 
-const DropdownIcon = ({ open = false }: Props): JSX.Element => {
+const DropdownIcon = ({ open = false, onClick }: Props): JSX.Element => {
   return (
     <Popover.Button
       className={classNames(
@@ -21,6 +23,7 @@ const DropdownIcon = ({ open = false }: Props): JSX.Element => {
           "ml-2 h-5 w-5 group-hover:text-gray-500"
         )}
         aria-hidden="true"
+        onClick={onClick}
       />
     </Popover.Button>
   )

@@ -9,7 +9,7 @@ interface Props {
 
 }
 
-const Header = (props: Props): JSX.Element => {
+const Header = (): JSX.Element => {
     const menu = useStaticQuery<Query["readPages"]>(`
         query {
             readPages(filter: {

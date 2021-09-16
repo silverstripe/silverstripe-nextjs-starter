@@ -1,21 +1,20 @@
 import React, { useContext } from "react"
 
 export interface UIStateContext {
-    // Global
-    sideMenuOpen: boolean
-    setSideMenuOpen: (open: boolean) => void
-    toggleSideMenuOpen: () => void
+    isMenuItemOpen: (link: string) => boolean
+    toggleMenuItem: (link: string) => void
+    initURL: (url: string) => void
 }
 
 const initialValue: UIStateContext = {
-    sideMenuOpen: false,
-    setSideMenuOpen(bool) {},
-    toggleSideMenuOpen() {},
+    isMenuItemOpen: (link) => false,
+    toggleMenuItem: (link) => {},
+    initURL: (url) => {},
 }
 
 export const Context = React.createContext<UIStateContext>(initialValue)
 
-export const useUIStateContext = (): UIStateContext => {
+export const useUIState = (): UIStateContext => {
     const state = useContext(Context)
     
     return state
