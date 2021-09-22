@@ -4,6 +4,19 @@ import dotenv from 'dotenv'
 import { createClient } from '@silverstripe/nextjs-builder'
 import jwt, { JwtPayload } from 'jsonwebtoken'
 
+
+const setCookieSameSite = (res: NextApiResponse, value: string) => {
+  const cookies = res.getHeader("Set-Cookie") as string[];
+  res.setHeader(
+    "Set-Cookie",
+    cookies?.map((cookie) =>
+      cookie.replace(
+        "SameSite=Lax",
+        `SameSite=${value}; Secure;`
+      )
+    )
+  );
+};
 export default async (req: NextApiRequest, res: NextApiResponse) => {
     dotenv.config()
     const client = createClient(ssConfig)
@@ -26,7 +39,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       return res.status(401).json({ message: `Token has expired.` })
     }
 
-    const result: any = await client.query(`
+    const result: any = await client.queryUncached(`
 query PreviewPage($link: String!) {
   readOnePage(link: $link) {
     id
@@ -37,10 +50,10 @@ query PreviewPage($link: String!) {
   { link }
 )
     if (!result?.readOnePage) {
-      return res.status(401).json({ message: `Invalid link` })
+      return res.status(401).json({ message: `Invalid link ${link}` })
     }
   
     res.setPreviewData({})
-  
+    setCookieSameSite(res, "None");
     res.redirect(result.readOnePage.link)
   }
