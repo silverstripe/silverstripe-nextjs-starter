@@ -3,17 +3,7 @@ import { GlobeIcon } from "@heroicons/react/solid"
 import { useStaticQuery } from "@silverstripe/nextjs-toolkit"
 import { Query } from "ss-schema"
 
-interface Props {}
-const footer = {
-  company: [
-    { name: "Our Properties", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Our Team", href: "#" },
-    { name: "About Us", href: "#" },
-  ],
-}
-
-const Footer = (props: Props): JSX.Element => {
+const Footer = (): JSX.Element => {
   const data = useStaticQuery<Query["readPages"] & Query["readOneSiteConfig"]>(`
         query {
             readPages(filter: {
