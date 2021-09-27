@@ -6,14 +6,12 @@ import DropdownMenuItem from "./DropdownMenuItem"
 import { PageInterface } from "ss-schema"
 import { useRouter } from "next/router"
 import Link from "next/link"
-import { useUIState } from "context/uiState"
 
 interface Props {
   menuItems: Array<PageInterface>
 }
 const MainMenu = ({ menuItems }: Props): JSX.Element => {
   const router = useRouter()
-  const uiState = useUIState()
 
   return (
     <Popover.Group as="nav" className="hidden md:flex space-x-10">
