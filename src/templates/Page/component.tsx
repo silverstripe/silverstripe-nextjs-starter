@@ -7,7 +7,6 @@ const Page: React.FC<PageProps> = ({ query: { readOnePage }}) => {
         console.error(`Page query for component at ${__filename} returned null`)
         return null
     }
-    const elements = readOnePage.elementalArea?.elements.nodes ?? []
     return (
         <PageLayout page={readOnePage}>
             <h2>{readOnePage.title}</h2>            
