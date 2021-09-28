@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "clean": "npx rimraf .next",
-    "generate": "graphql-codegen --config codegen.yml",
+    "generate": "graphql-codegen --require dotenv/config --config codegen.yml",
     "scaffold-blocks": "yarn generate && nextjs-builder scaffold-blocks",
     "scaffold-pages": "yarn generate && nextjs-builder scaffold-pages",
     "setup": "nextjs-builder setup"
