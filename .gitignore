@@ -38,6 +38,6 @@ yarn-error.log*
 .cache/
 
 .idea/
-
+.vscode/
 yarn.lock
 ss-schema.ts
