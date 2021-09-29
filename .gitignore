@@ -39,5 +39,4 @@ yarn-error.log*
 
 .idea/
 .vscode/
-yarn.lock
 ss-schema.ts
