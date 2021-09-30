@@ -17,7 +17,7 @@
     "paths": {
       "lib": ["../lib", "../lib/*"],
       "types": ["../types"],
-      "cache": ["../.cache", "../.cache/*"],
+      "cache": ["../.ss-cache", "../.ss-cache/*"],
       "ss-schema": ["../ss-schema"],
       "ss-config": ["../ss.config"],
     }
