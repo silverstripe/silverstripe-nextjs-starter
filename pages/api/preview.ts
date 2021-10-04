@@ -39,7 +39,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       return res.status(401).json({ message: `Token has expired.` })
     }
 
-    const result: any = await client.queryUncached(`
+    const result: any = await client.query(`
 query PreviewPage($link: String!) {
   readOnePage(link: $link) {
     id

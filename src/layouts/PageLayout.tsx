@@ -4,7 +4,9 @@ import { PageUnion } from "types"
 import MainMenu from "components/MainMenu"
 import Head from "next/head"
 interface Props {
-  page?: PageUnion | null
+  page?: PageUnion & {
+    metaTitle?: string
+  } | null
 }
 
 const PageLayout = ({
