@@ -9,7 +9,7 @@ module.exports = {
       new webpack.DefinePlugin({
         'process.env.BUILD_ID': JSON.stringify(buildId),
         // Required for embedded images. Remove if your images are hosted outside of the CMS instance.
-        'process.env.SILVERSTRIPE_BASE_URL': JSON.stringify(process.env.SILVERSTRIPE_BASE_URL ?? ``)
+        'process.env.SILVERSTRIPE_BASE_URL': JSON.stringify(process.env.SILVERSTRIPE_BASE_URL || ``)
       })
     )
     config.module.rules.push({
