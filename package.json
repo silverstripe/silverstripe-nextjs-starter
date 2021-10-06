@@ -20,8 +20,8 @@
   "dependencies": {
     "@headlessui/react": "^1.4.0",
     "@heroicons/react": "^1.0.4",
-    "@silverstripe/nextjs-builder": "^0.2.9",
-    "@silverstripe/nextjs-toolkit": "^0.1.5",
+    "@silverstripe/nextjs-builder": "^0.2.12",
+    "@silverstripe/nextjs-toolkit": "^0.1.7",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/typography": "^0.4.1",
     "assert": "^2.0.0",
